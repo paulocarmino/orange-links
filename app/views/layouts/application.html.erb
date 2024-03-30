@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orange Shortner Links</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <main class="px-5 mx-auto mt-28 prose">
+      <%= tag.p alert, class: "px-4 py-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded" if alert %>
+      <%= tag.p notice, class: "px-4 py-2 text-sm font-medium text-blue-800 bg-blue-100 rounded" if notice %>
+
+      <%= yield %>
+    </main>
+  </body>
+</html>
