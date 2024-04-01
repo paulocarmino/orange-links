@@ -18,11 +18,12 @@
     </div>
 
     <div class="col-span-2 text-xs text-center">
-      <%= link_to pluralize(link.views_count, 'view'), link, class: "px-2 py-1.5 rounded bg-gray-100 no-underline" %>
+      <%= link_to pluralize(link.views_count, 'view'), link, class: "text-gray-900 px-2 py-1.5 rounded bg-gray-100 no-underline" %>
     </div>
 
+    <%= view_url(link) %>
     <div class="text-xs text-center">
-      <%= button_tag "Copy", class: "px-2 py-1.5 rounded bg-gray-100 no-underline", data: { controller: "clipboard", clipboard_text: view_url(link) } %>
+      <%= button_tag "Copy", class: "font-medium text-gray-900 px-2 py-1.5 rounded bg-gray-100 no-underline", data: { controller: "clipboard", clipboard_text: view_url(link) } %>
     </div>
   </div>
 <% end %>

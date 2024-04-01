@@ -1,6 +1,6 @@
 <%= link_to "← Back to all links", root_path, class: "no-underline text-xs px-3 py-2 rounded bg-gray-100" %>
 
-<h1 class="mt-5 mb-3"><%= @link.url %></h1>
+<h1 class="mt-10 mb-5"><%= @link.url %></h1>
 
 <div class="flex justify-between items-center mb-4 text-xs">
   <%= link_to view_path(@link), target: :_blank, data: {turbo:false}, class: "px-2 py-1.5 rounded bg-gray-100 flex items-center gap-1 no-underline" do %>
@@ -13,7 +13,8 @@
 
   <div class="flex gap-2 items-center">
     <%= tag.div pluralize(@link.views_count, "view") %>
-    <%= link_to "Edit", edit_link_path(@link), class: "px-2 py-1.5 rounded bg-gray-100 no-underline" %>
+    <%= button_tag "Copy", class: "font-medium text-gray-900 px-2 py-1.5 rounded bg-gray-100 no-underline", data: { controller: "clipboard", clipboard_text: view_url(@link) } %>
+    <%= link_to "Edit", edit_link_path(@link), class: "text-gray-900 px-2 py-1.5 rounded bg-gray-100 no-underline" %>
   </div>
 </div>
 
