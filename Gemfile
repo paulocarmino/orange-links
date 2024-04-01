@@ -28,7 +28,5 @@ group :development do
 end
 
 gem "chartkick", "~> 5.0"
-
 gem "groupdate", "~> 6.4"
-
 gem "redis", "~> 5.1"
