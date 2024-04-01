@@ -46,5 +46,7 @@ module UrlShortner
       g.system_tests false
       g.view_specs false
     end
+
+    config.active_job.queue_adapter = :sucker_punch
   end
 end

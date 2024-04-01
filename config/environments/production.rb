@@ -96,4 +96,4 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
 
-Rails.application.routes.default_url_options = {host: "change-me-in-environment.com", https: true}
+Rails.application.routes.default_url_options = {host: ENV["BASE_URL"]}
